@@ -7,18 +7,19 @@ namespace fizzBuzz
 
         public int Numeric { get => numeric; set => numeric = value; }
 
+        private string Calculate(int divisor, string text)
+        {
+            if (numeric > 0 && numeric % divisor == 0)
+                return text;
+            return "";
+        }
+
         public string GetResult()
         {
-            if(numeric > 0 && numeric % 3 == 0)
-            {
-                return "fizz";
-            }
+            string fizzbuzz = String.Concat(Calculate(3, "fizz"), Calculate(5, "buzz"));
 
-            if (numeric > 0 && numeric % 5 == 0)
-            {
-                return "buzz";
-            }
-
+            if (fizzbuzz.Length > 0)
+                return fizzbuzz;
             return numeric.ToString();
         }
     }

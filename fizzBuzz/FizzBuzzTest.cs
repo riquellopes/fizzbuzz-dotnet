@@ -59,5 +59,27 @@ namespace fizzBuzz
 
             Assert.Equal("buzz", f.GetResult());
         }
+
+        [Fact]
+        public void TestFizzBuzz25()
+        {
+            FizzBuzz f = new FizzBuzz
+            {
+                Numeric = 25
+            };
+
+            Assert.Equal("buzz", f.GetResult());
+        }
+
+        [Fact]
+        public void TestFizzBuzz15()
+        {
+            FizzBuzz f = new FizzBuzz
+            {
+                Numeric = 15
+            };
+
+            Assert.Equal("fizzbuzz", f.GetResult());
+        }
     }
 }
